@@ -22,18 +22,36 @@ public class MainFrmController {
     }
 
     @FXML
-    private void onIncomingBtnClick(){
-        System.out.println("INCOMING");
+    private void onIncomingBtnClick() throws IOException {
+        Parent frmParent = FXMLLoader.load(MainApp.class.getResource("IncomingFrmView.fxml"));
+        Scene SecFrmScene = new Scene(frmParent);
+
+        Stage window = new Stage();
+        window.setTitle("Incoming Stock");
+        window.setScene(frmParent.getScene());
+        window.show();
     }
 
     @FXML
-    private void onEditStockBtnClick(){
-        System.out.println("EDIT STOCK");
+    private void onEditStockBtnClick() throws IOException {
+        Parent frmParent = FXMLLoader.load(MainApp.class.getResource("EditStockFrmView.fxml"));
+        Scene SecFrmScene = new Scene(frmParent);
+
+        Stage window = new Stage();
+        window.setTitle("Edit Stock");
+        window.setScene(frmParent.getScene());
+        window.show();
     }
 
     @FXML
-    private void onViewStockBtnClick(){
-        System.out.println("VIEW STOCK");
+    private void onViewStockBtnClick() throws IOException {
+        Parent frmParent = FXMLLoader.load(MainApp.class.getResource("ViewStockFrmView.fxml"));
+        Scene SecFrmScene = new Scene(frmParent);
+
+        Stage window = new Stage();
+        window.setTitle("View Stock");
+        window.setScene(frmParent.getScene());
+        window.show();
     }
 
 
